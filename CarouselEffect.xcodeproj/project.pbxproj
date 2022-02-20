@@ -11,6 +11,7 @@
 		326ABE3027B6E710001E9DDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABE2F27B6E710001E9DDC /* MainViewController.swift */; };
 		326ABE3527B6E716001E9DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326ABE3427B6E716001E9DDC /* Assets.xcassets */; };
 		326ABE3827B6E716001E9DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326ABE3627B6E716001E9DDC /* LaunchScreen.storyboard */; };
+		32DA9F5E27C0C77D00B20C9A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DA9F5D27C0C77D00B20C9A /* HeaderView.swift */; };
 		7B94A4690D8C764EDB89D4C5 /* libPods-CarouselEffect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5524E142A00985EEAC10EE /* libPods-CarouselEffect.a */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		326ABE3427B6E716001E9DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326ABE3727B6E716001E9DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326ABE3927B6E716001E9DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32DA9F5D27C0C77D00B20C9A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		42C1F35BAEA05D3EF82C1922 /* Pods-CarouselEffect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselEffect.release.xcconfig"; path = "Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect.release.xcconfig"; sourceTree = "<group>"; };
 		5F782D5F09C3E26C3502FD1F /* Pods-CarouselEffect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselEffect.debug.xcconfig"; path = "Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5524E142A00985EEAC10EE /* libPods-CarouselEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarouselEffect.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +84,7 @@
 		326ABE2A27B6E710001E9DDC /* CarouselEffect */ = {
 			isa = PBXGroup;
 			children = (
-				322689C127B7F9C90071BBDA /* Cell */,
+				32DA9F5C27C0C75E00B20C9A /* Views */,
 				326ABE4027B70B9D001E9DDC /* Supporting Files */,
 				326ABE3F27B70B81001E9DDC /* App */,
 				322689C027B7F7F20071BBDA /* Screens */,
@@ -106,6 +108,15 @@
 				326ABE3427B6E716001E9DDC /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32DA9F5C27C0C75E00B20C9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				322689C127B7F9C90071BBDA /* Cell */,
+				32DA9F5D27C0C77D00B20C9A /* HeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BDAB7B05D131AD414C9A8C16 /* Pods */ = {
@@ -214,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326ABE3027B6E710001E9DDC /* MainViewController.swift in Sources */,
+				32DA9F5E27C0C77D00B20C9A /* HeaderView.swift in Sources */,
 				326ABE2C27B6E710001E9DDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

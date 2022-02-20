@@ -4,25 +4,9 @@ import SnapKit
 class MainViewController: UIViewController {
     
     // MARK: Views
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Interests"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        return label
-    }()
-
-    private lazy var accountImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "avatar")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-    
-    private lazy var separator : UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        return view
+    private lazy var headerView: HeaderView = {
+        let headerView = HeaderView()
+        return headerView
     }()
     
     private lazy var discroverButton: UIButton = {
@@ -60,32 +44,17 @@ class MainViewController: UIViewController {
     
     private func setupUserInterface() {
         view.backgroundColor = .systemBackground
-        
-        view.addSubview(titleLabel)
-        view.addSubview(accountImage)
-        view.addSubview(separator)
-        view.addSubview(discroverButton)
-        view.addSubview(editProfileButton)
+
+        [headerView,discroverButton,editProfileButton].forEach { v in
+            view.addSubview(v)
+        }
     }
     
     private func makeConstraints() {
-        titleLabel.snp.makeConstraints { make in
+        headerView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
-            make.left.equalToSuperview().inset(16)
-        }
-
-        accountImage.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
-            make.right.equalToSuperview().inset(16)
-            make.height.width.equalTo(36)
-        }
-        
-        separator.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp_bottomMargin).inset(-16)
             make.left.right.equalToSuperview().inset(16)
-            make.height.equalTo(1)
         }
-        
         discroverButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)

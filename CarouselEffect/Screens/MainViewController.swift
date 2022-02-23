@@ -3,7 +3,7 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
-    // MARK: Views
+    // MARK: -  Views
     private lazy var headerView: HeaderView = {
         let headerView = HeaderView()
         return headerView
@@ -23,18 +23,18 @@ class MainViewController: UIViewController {
         return button
     }()
     
-//    private lazy var collectionView: UICollectionView = {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .horizontal
-//        let collectionView = UICollectionView(frame: .zero,
-//                                              collectionViewLayout: layout)
-//        collectionView.isHidden = true
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
-//        collectionView.backgroundColor = .systemGray6
-////        collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
-//        return collectionView
-//    }()
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: layout)
+        collectionView.isHidden = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = .systemGray6
+//        collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
+        return collectionView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,28 +67,28 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: UICollectionViewDataSource
-//extension MainViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        <#code#>
-//    }
-//
-//
-//}
+// MARK: - UICollectionViewDataSource
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-// MARK: UICollectionViewDelegate
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+
+
+}
+
+// MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
     
 }
 
-//// MARK: UICollectionViewDelegateFlowLayout
-//extension MainViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: Constants.UI.Layout.collectionViewCellWidth,
-//                      height: Constants.UI.Layout.collectionViewCellHeight)
-//    }
-//}
+// MARK: - UICollectionViewDelegateFlowLayout
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constants.UI.Layout.collectionViewCellWidth,
+                      height: Constants.UI.Layout.collectionViewCellHeight)
+    }
+}
